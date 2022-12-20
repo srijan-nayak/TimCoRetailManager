@@ -18,22 +18,28 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
-                   Text="Login Form" FontSize="64" FontFamily="Segoe UI Light" Margin="0,0,0,20"/>
+                   Text="Login Form" FontSize="64" FontFamily="Segoe UI Light" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+        <!--Error message row-->
+        <TextBlock x:Name="ErrorMessage" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                   Visibility="{Binding IsErrorVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}" 
+                   Foreground="Red" MaxWidth="300" Margin="0,0,0,20" TextWrapping="Wrap"/>
 
         <!--Username row-->
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Username:" Margin="0,0,0,10"/>
-        <TextBox x:Name="UserName" Grid.Row="1" Grid.Column="2" MinWidth="150" Margin="0,0,0,10" />
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Username:" Margin="0,0,5,10"/>
+        <TextBox x:Name="UserName" Grid.Row="2" Grid.Column="2" MinWidth="350" Margin="0,0,0,10" />
 
         <!--Password row-->
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="Password:" Margin="0,0,0,20"/>
-        <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="2" MinWidth="150" Margin="0,0,0,20" />
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Password:" Margin="0,0,17,20"/>
+        <PasswordBox x:Name="Password" Grid.Row="3" Grid.Column="2" MinWidth="350" Margin="0,0,0,20" />
 
         <!--Login row-->
-        <Button x:Name="LogIn" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+        <Button x:Name="LogIn" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
                 HorizontalAlignment="Center" Padding="20, 5" Content="Log In" />
     </Grid>
 </UserControl>

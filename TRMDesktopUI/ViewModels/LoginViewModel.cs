@@ -40,17 +40,33 @@ namespace TRMDesktopUI.ViewModels
 
         public bool CanLogIn => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password);
 
+        private bool _isErrorVisible;
+
+        private string _errorMessage;
+
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                _errorMessage = value;
+                NotifyOfPropertyChange(() => ErrorMessage);
+                NotifyOfPropertyChange(() => IsErrorVisible);
+            }
+        }
+
+        public bool IsErrorVisible => !string.IsNullOrWhiteSpace(ErrorMessage);
+
         public async Task LogIn()
         {
             try
             {
+                ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
-
             }
             catch (Exception ex)
             {
-                // TODO: Handle incorrect credentials for user login
-                Console.WriteLine(ex.Message);
+                ErrorMessage = ex.Message;
             }
         }
     }
