@@ -40,8 +40,6 @@ namespace TRMDesktopUI.ViewModels
 
         public bool CanLogIn => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password);
 
-        private bool _isErrorVisible;
-
         private string _errorMessage;
 
         public string ErrorMessage
