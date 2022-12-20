@@ -1,5 +1,7 @@
 ﻿using Caliburn.Micro;
 using System;
+using System.Threading.Tasks;
+using TRMDesktopUI.Helpers;
 
 namespace TRMDesktopUI.ViewModels
 {
@@ -7,6 +9,12 @@ namespace TRMDesktopUI.ViewModels
     {
         private string _userName;
         private string _password;
+        private IAPIHelper _apiHelper;
+
+        public LoginViewModel(IAPIHelper aPIHelper)
+        {
+            _apiHelper = aPIHelper;
+        }
 
         public string UserName
         {
@@ -32,9 +40,18 @@ namespace TRMDesktopUI.ViewModels
 
         public bool CanLogIn => !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password);
 
-        public void LogIn()
+        public async Task LogIn()
         {
-            Console.WriteLine();
+            try
+            {
+                var result = await _apiHelper.Authenticate(UserName, Password);
+
+            }
+            catch (Exception ex)
+            {
+                // TODO: Handle incorrect credentials for user login
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
