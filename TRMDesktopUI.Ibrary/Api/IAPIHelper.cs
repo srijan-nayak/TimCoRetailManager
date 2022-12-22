@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using TRMDesktopUI.Models;
+using TRMDesktopUI.Ibrary.Models;
 
-namespace TRMDesktopUI.Helpers
+namespace TRMDesktopUI.Ibrary.Api
 {
     public interface IAPIHelper
     {

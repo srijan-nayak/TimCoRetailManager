@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using TRMDesktopUI.Models;
+using TRMDesktopUI.Ibrary.Models;
 
-namespace TRMDesktopUI.Helpers
+namespace TRMDesktopUI.Ibrary.Api
 {
     public class APIHelper : IAPIHelper
     {
