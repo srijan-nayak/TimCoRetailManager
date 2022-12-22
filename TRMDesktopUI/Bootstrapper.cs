@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using TRMDesktopUI.Helpers;
-using TRMDesktopUI.Ibrary.Api;
+using TRMDesktopUI.Library.Api;
 using TRMDesktopUI.ViewModels;
 
 namespace TRMDesktopUI

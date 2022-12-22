@@ -125,9 +125,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TRMDesktopUI.Ibrary\TRMDesktopUI.Ibrary.csproj">
+    <ProjectReference Include="..\TRMDesktopUI.Ibrary\TRMDesktopUI.Library.csproj">
       <Project>{68E7CE94-DDF3-40AF-9673-4D5EF2153BBF}</Project>
-      <Name>TRMDesktopUI.Ibrary</Name>
+      <Name>TRMDesktopUI.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

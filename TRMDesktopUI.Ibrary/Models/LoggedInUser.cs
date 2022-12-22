@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TRMDesktopUI.Ibrary.Models
+namespace TRMDesktopUI.Library.Models
 {
     public class LoggedInUser
     {

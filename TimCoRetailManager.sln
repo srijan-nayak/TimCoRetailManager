@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDesktopUI", "TRMDesktopU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDataManager.Library", "TRMDataManager.Library\TRMDataManager.Library.csproj", "{0D0F4921-03A9-4D5B-BFCD-2542BEA70DCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDesktopUI.Ibrary", "TRMDesktopUI.Ibrary\TRMDesktopUI.Ibrary.csproj", "{68E7CE94-DDF3-40AF-9673-4D5EF2153BBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDesktopUI.Library", "TRMDesktopUI.Ibrary\TRMDesktopUI.Library.csproj", "{68E7CE94-DDF3-40AF-9673-4D5EF2153BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
