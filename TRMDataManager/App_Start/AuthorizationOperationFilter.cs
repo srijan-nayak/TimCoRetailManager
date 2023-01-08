@@ -19,6 +19,7 @@ namespace TRMDataManager.App_Start
                 type = "string",
                 @in = "header",
                 description = "access token",
+                @default = "Bearer ",
                 required = false,
             });
         }
