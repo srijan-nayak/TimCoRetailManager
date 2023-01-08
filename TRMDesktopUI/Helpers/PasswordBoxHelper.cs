@@ -10,7 +10,7 @@ namespace TRMDesktopUI.Helpers
             typeof(string), typeof(PasswordBoxHelper),
             new FrameworkPropertyMetadata(string.Empty, OnBoundPasswordChanged));
 
-        public static string GetBountPassword(DependencyObject d)
+        public static string GetBoundPassword(DependencyObject d)
         {
             var box = d as PasswordBox;
             if (box != null)
@@ -24,7 +24,7 @@ namespace TRMDesktopUI.Helpers
 
         public static void SetBoundPassword(DependencyObject d, string value)
         {
-            if (string.Equals(value, GetBountPassword(d)))
+            if (string.Equals(value, GetBoundPassword(d)))
             {
                 return;
             }
@@ -41,7 +41,7 @@ namespace TRMDesktopUI.Helpers
                 return;
             }
 
-            box.Password = GetBountPassword(d);
+            box.Password = GetBoundPassword(d);
         }
 
         private static void PasswordChanged(object sender, RoutedEventArgs e)
